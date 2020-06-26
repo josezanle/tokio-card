@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: #DCD9D4;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), radial-gradient(at 50% 0%, rgba(255, 255, 255, 0.10) 0%, rgba(0, 0, 0, 0.50) 50%);
+    background-blend-mode: soft-light, screen;
+}
+
+.card {
+    display: flex;
+    flex-flow: column;
+    height: 500px;
+    width: 350px;
+    border-radius: 2em;
+    box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, .5);
+}
+
+.banner {
+    flex: 5;
+    width: 100%;
+    height: 100%;
+    border: 5px solid black;
+    border-top-left-radius: 1.5em;
+    border-top-right-radius: 1.5em;
+}
+
+.banner video {
+    object-fit: cover;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+    width: 100%;
+    height: 100%;
+}
+
+.text {
+    flex: 1;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+    background: black;
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+    width: 100%;
+    height: 100%;
+}
+
+.left,
+.right {
+    flex: 1;
+    font-size: 2em;
+    color: silver;
+}
+
+h2 {
+    flex: 8;
+    font-size: 2em;
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+h2 span {
+    animation: animate 1s linear infinite;
+}
+
+h2 span:nth-child(1) {
+    animation-delay: 0s;
+}
+
+h2 span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+h2 span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+h2 span:nth-child(4) {
+    animation-delay: 0.6s;
+}
+
+h2 span:nth-child(5) {
+    animation-delay: 0.8s;
+}
+
+@keyframes animate {
+    0%,
+    80% {
+        columns: #333333;
+        text-shadow: none;
+    }
+    100% {
+        color: #fff;
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff, 0 0 80px #fff, 0 0 120px #fff, 0 0 160px #fff;
+    }
+}
